@@ -1,6 +1,6 @@
 import { FaArrowRight, FaLeaf, FaRecycle, FaStar, FaTree, FaUsers, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaPhone, FaEnvelope, } from "react-icons/fa"
 
-export default function Page() {
+export default function LandingPage() {
   const testimonials = [
     {
       name: "Angelina Warren",
