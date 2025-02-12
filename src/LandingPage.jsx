@@ -1,4 +1,5 @@
 import { FaArrowRight, FaLeaf, FaRecycle, FaStar, FaTree, FaUsers, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaPhone, FaEnvelope, } from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   const testimonials = [
@@ -32,6 +33,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[600px] overflow-hidden">
+        
         <div className="absolute inset-0 bg-gradient-to-r from-lime-500/90 to-lime-600/90" />
         <img
           src="/placeholder.svg?height=600&width=1920"
@@ -41,8 +43,17 @@ export default function LandingPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
+        <div className="absolute inset-0 flex-col items-center w-4/5 m-auto max-sm:w-full">
+        <header className="flex  justify-between items-center text-white header mb-40">
+          <h1>logo</h1>
+          <ul className="flex gap-3">
+            <li className="capitalize"><Link  to={'/about'}>About us</Link></li>
+            <li className="capitalize"><Link  to={'/contact'}>contact</Link></li>
+            <li className="capitalize"><Link  to={'/service'}>service</Link></li>
+            <li className="capitalize"><Link  to={'/blog'}>blog</Link></li>
+          </ul>
+        </header>
+          <div className="container mx-auto">
             <div className="max-w-2xl">
               <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
                 Be Safe Controls Environment
