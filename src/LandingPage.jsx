@@ -1,6 +1,16 @@
 import { FaArrowRight, FaLeaf, FaRecycle, FaStar, FaTree, FaUsers, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP, FaPhone, FaEnvelope, } from "react-icons/fa"
 import { Link } from "react-router-dom";
-
+import Banner from './assets/Section.png'
+import Image1 from './assets/about.png.png'
+import Image2 from './assets/process-thumb.jpg.png'
+import Image3 from './assets/service-thumb2.png.png'
+import Image4 from './assets/service-thumb3.png.png'
+import Image5 from './assets/blog-1.jpg.png'
+import Image6 from './assets/footer-widget-2.png.png'
+import Image7 from './assets/blog-post-2.png.png'
+import User1 from './assets/team-3.png.png'
+import User2 from './assets/team-2.png.png'
+import User3 from './assets/team-1.png.png'
 export default function LandingPage() {
   const testimonials = [
     {
@@ -18,25 +28,23 @@ export default function LandingPage() {
   ];
 
   const teamMembers = [
-    { name: "Connie Diai", role: "Team", image: "/placeholder.svg?height=120&width=120" },
-    { name: "James E.", role: "Head", image: "/placeholder.svg?height=120&width=120" },
-    { name: "Jane D.", role: "Manager", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Connie Diai", role: "Team", image: User1 },
+    { name: "James E.", role: "Head", image: User2 },
+    { name: "Jane D.", role: "Manager", image: User3 },
   ];
 
   const blogPosts = [
-    { title: "Top 10 Recycling Tips for Environment", image: "/placeholder.svg?height=200&width=300" },
-    { title: "How Every Individual Can Make a Difference", image: "/placeholder.svg?height=200&width=300" },
-    { title: "Sustainable & Renewable Energy Technology", image: "/placeholder.svg?height=200&width=300" },
+    { title: "Top 10 Recycling Tips for Environment", image: Image5 },
+    { title: "How Every Individual Can Make a Difference", image: Image6 },
+    { title: "Sustainable & Renewable Energy Technology", image: Image7 },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[600px] overflow-hidden">
-        
-        <div className="absolute inset-0 bg-gradient-to-r from-lime-500/90 to-lime-600/90" />
-        <img
-          src="/placeholder.svg?height=600&width=1920"
+            <img
+          src={Banner}
           alt="Nature background"
           width={1920}
           height={600}
@@ -53,17 +61,7 @@ export default function LandingPage() {
             <li className="capitalize"><Link  to={'/blog'}>blog</Link></li>
           </ul>
         </header>
-          <div className="container mx-auto">
-            <div className="max-w-2xl">
-              <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-                Be Safe Controls Environment
-              </h1>
-              <p className="mb-8 text-lg text-white/90">Taking care of our planet for a sustainable future</p>
-              <button className="rounded-full bg-white px-8 py-3 font-semibold text-lime-600 transition hover:bg-lime-50">
-                Learn More
-              </button>
-            </div>
-          </div>
+         
         </div>
       </section>
 
@@ -73,7 +71,7 @@ export default function LandingPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="relative rounded-2xl bg-lime-50 p-6">
               <img
-                src="/placeholder.svg?height=400&width=500"
+                src={Image1}
                 alt="Environmental sustainability"
                 width={500}
                 height={400}
@@ -101,7 +99,7 @@ export default function LandingPage() {
       {/* Services Section */}
       <section className="bg-lime-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 border-b-2 border-gray-300 p-8">
+          <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 p-8">
             Echofy Provide Environment Best Leading Services
           </h2>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -109,17 +107,17 @@ export default function LandingPage() {
               {
                 title: "Tree Plantation",
                 icon: <FaTree className="h-8 w-8 text-lime-500" />,
-                image: "/placeholder.svg?height=200&width=300",
+                image: Image2,
               },
               {
                 title: "Plant Recycling",
                 icon: <FaRecycle className="h-8 w-8 text-lime-500" />,
-                image: "/placeholder.svg?height=200&width=300",
+                image: Image3,
               },
               {
                 title: "Growing Green",
                 icon: <FaLeaf className="h-8 w-8 text-lime-500" />,
-                image: "/placeholder.svg?height=200&width=300",
+                image: Image4,
               },
             ].map((service, index) => (
               <div key={index} className="overflow-hidden rounded-xl bg-white shadow-lg transition hover:shadow-xl">
@@ -306,7 +304,7 @@ export default function LandingPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {teamMembers.map((member, index) => (
               <div key={index} className="group relative text-center">
-                <img src={member.image} alt={member.name}  className="mx-auto border-4 w-20 h-20 border-white shadow-lg transition group-hover:border-lime-500 rounded-full mb-3" />
+                <img src={member.image} alt={member.name}  className="mx-auto border-4 w-60 h-60 border-white shadow-lg transition group-hover:border-lime-500 rounded-full mb-3" />
                 <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
                 <p className="text-gray-500">{member.role}</p>
               </div>
@@ -322,7 +320,7 @@ export default function LandingPage() {
           <div className="grid gap-8 md:grid-cols-3">
             {blogPosts.map((post, index) => (
               <div key={index} className="group overflow-hidden rounded-lg shadow-lg transition hover:shadow-xl">
-                <img src={post.image} alt={post.title} width={300} height={200} className="object-cover transition group-hover:scale-105" />
+                <img src={post.image} alt={post.title}  className="object-cover transition group-hover:scale-105 w-full h-80" />
                 <div className="p-6">
                   <h3 className="mb-4 text-lg font-semibold">{post.title}</h3>
                   <button className="inline-flex items-center text-lime-500 transition hover:text-lime-600">
